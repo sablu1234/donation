@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Convent Foundation
     </title>
-    <link rel="stylesheet" href="<?php echo get_parent_theme_file_uri('assets/css/style.css')?>  ">
+    <link rel="stylesheet" href="<?php echo get_parent_theme_file_uri('assets/css/style.css');?>">
     <link rel="stylesheet" href="<?php echo get_parent_theme_file_uri('assets/css/responsive.css');?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="<?php echo get_parent_theme_file_uri('https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css')?>">
+    <link rel="stylesheet" href="<?php echo get_parent_theme_file_uri('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');?>">
+    <script src="<?php echo get_parent_theme_file_uri('https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js');?>"></script>
+    <script src="<?php echo get_parent_theme_file_uri('https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js');?>"></script>
+    <script src="<?php echo get_parent_theme_file_uri('https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js');?>"></script>
     <link rel="shortcut icon" href="img/don/salary.png" type="image/x-icon">
 </head>
 
@@ -23,7 +23,21 @@
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="#home">MAB CORP Foundation</a>
+                    <a class="navbar-brand" href="#home">MAB CORP Foundation
+                    <?php
+$age=22;
+if($age<18){
+    echo "<span style='color: red;'><br>you are baby</span>";
+}
+else{
+    echo "<span style='color: red;'><br>you are baby</span>";
+}
+
+?>
+
+
+
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -80,6 +94,25 @@
         <div class="container">
             <div class="home-content">
                 <div class="row">
+
+<?php
+while (have_posts()): the_post();
+?>
+ <div class="col-lg-6 order-first order-lg-last">
+                        <div class="img-sec">
+                            <h1><?php the_title('hi')?></h1>
+                            <h5><?php the_content('')?></h5>
+                            <h1><?php the_time()?></h1>
+                            <img src="<?php echo get_parent_theme_file_uri('/assets/img/img-1.png');?>" alt="home-image">
+                        </div>
+                    </div>
+<?php
+endwhile;
+
+
+?>
+
+
                     <div class="col-lg-6 align-item-center">
                         <div class="home-info">
                             <h1>Alone we can do little, together we can do so much</h1>
@@ -90,11 +123,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-first order-lg-last">
-                        <div class="img-sec">
-                            <img src="<?php echo get_parent_theme_file_uri('/assets/img/img-1.png');?>" alt="home-image">
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
