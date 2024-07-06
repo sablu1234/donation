@@ -100,10 +100,22 @@ while (have_posts()): the_post();
 ?>
  <div class="col-lg-6 order-first order-lg-last">
                         <div class="img-sec">
+                            <?php 
+                            if(has_post_thumbnail()){
+                                the_post_thumbnail();
+                            }
+                            else{
+                                ?>
+                            <img class="hasan" src="<?php echo get_parent_theme_file_uri('/assets/img/img-1.png');?>" alt="home-image">
+                                <?php
+                            }
+                            
+                            the_post_thumbnail('medium',array('class'=>'hasan'));?>
                             <h1><?php the_title('hi')?></h1>
                             <h5><?php the_content('')?></h5>
                             <h1><?php the_time()?></h1>
-                            <img src="<?php echo get_parent_theme_file_uri('/assets/img/img-1.png');?>" alt="home-image">
+                            <a href="<?php the_permalink(); ?>">hi permalink</a>
+                            <!-- <img class="hasan" src="<?php echo get_parent_theme_file_uri('/assets/img/img-1.png');?>" alt="home-image"> -->
                         </div>
                     </div>
 <?php
@@ -119,7 +131,7 @@ endwhile;
                             <h2>We <span>MAB CORP foundation</span> manage wastage for needy peoples</h2>
                             <p>Make a difference today: donate to MAB CORP and help improve lives.</p>
                             <div class="buttons">
-                                <a href="#contact" class="btn1">Donate now</a>
+                                <a class="btn1" href="<?php the_permalink(); ?>t" >Donate now</a>
                             </div>
                         </div>
                     </div>
