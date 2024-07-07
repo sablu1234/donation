@@ -96,6 +96,18 @@ else{
                 <div class="row">
 
 <?php
+// $name= "hadi";
+// $cell= "01320704726";
+// $email= "mdsablu36gmail.com";
+
+// $personinfo=array("hadi","01320704726","mdsablu36gmail.com");
+// echo $personinfo[0];
+
+
+
+if(have_posts()):
+
+
 while (have_posts()): the_post();
 ?>
  <div class="col-lg-6 order-first order-lg-last">
@@ -120,7 +132,9 @@ while (have_posts()): the_post();
                     </div>
 <?php
 endwhile;
-
+else:
+    echo "post nai";
+endif;
 
 ?>
 
