@@ -104,6 +104,21 @@ else{
 // echo $personinfo[0];
 
 
+// $info=array('d',46464,"hadi jaman",54564564);
+// echo count($info).' ';
+// echo $info[2];
+
+
+
+$personinfo=array(
+    'key'=>'value',
+    'name'=>'hadi jaman',
+    'childinfo'=>array(
+        'c_name'=>'rowza',
+    )
+);
+echo $personinfo['name'];
+
 
 if(have_posts()):
 
