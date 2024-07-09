@@ -110,15 +110,22 @@ else{
 
 
 
-$personinfo=array(
-    'key'=>'value',
-    'name'=>'hadi jaman',
-    'childinfo'=>array(
-        'c_name'=>'rowza',
-    )
-);
-echo $personinfo['name'];
+// $personinfo=array(
+//     'key'=>'value',
+//     'name'=>'hadi jaman',
+//     'childinfo'=>array(
+//         'c_name'=>'rowza',
+//     )
+// );
+// echo $personinfo['childinfo']['c_name'];
+// var_dump ($personinfo);
 
+$slno=0;
+for($taka=10;$taka<100;$taka+=10){
+    ECHO $taka.'<br>';
+    $slno++;
+}
+echo $slno;
 
 if(have_posts()):
 
