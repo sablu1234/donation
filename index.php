@@ -120,15 +120,24 @@ else{
 // echo $personinfo['childinfo']['c_name'];
 // var_dump ($personinfo);
 
-$slno=0;
-for($taka=10;$taka<100;$taka+=10){
-    ECHO $taka.'<br>';
-    $slno++;
+// $slno=0;
+// for($taka=10;$taka<100;$taka+=10){
+//     ECHO $taka.'<br>';
+//     $slno++;
+//     echo $slno;
+// }
+
+$taka=10;
+while( $taka<100){
+  
+    $taka+=10;
+    echo $taka;
 }
-echo $slno;
+
+
+
 
 if(have_posts()):
-
 
 while (have_posts()): the_post();
 ?>
