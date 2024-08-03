@@ -10,10 +10,22 @@ if(!function_exists('mytheme')){
 add_action('after_setup_theme','mytheme');
 
 include_once('inc/custompost/client.php');
+include_once('inc/custompost/team.php');
 
 
 
+// if (!function_exists('Css')){
 
+// 	function Css(){
+// 		wp_enqueue_style( 'style', get_stylesheet_uri() );
+// 		wp_enqueue_style( 'main_css', get_template_directory_uri() . '/assets/css/style.css');
+// 		wp_enqueue_style( 'responsive_css', get_template_directory_uri() . '/assets/css/responsive.css');
+// 		wp_enqueue_script( 'responsive_js', get_template_directory_uri() . '/assets/js/script.js');
+
+
+// 	}
+// }
+// add_action( 'wp_enqueue_scripts', 'Css' );
 
 
 
